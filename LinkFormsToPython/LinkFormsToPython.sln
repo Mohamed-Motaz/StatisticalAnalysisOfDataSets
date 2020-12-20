@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkFormsToPython", "LinkFormsToPython\LinkFormsToPython.csproj", "{DFDA6B17-0BEF-47E4-A372-E543546D3FB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFDA6B17-0BEF-47E4-A372-E543546D3FB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFDA6B17-0BEF-47E4-A372-E543546D3FB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFDA6B17-0BEF-47E4-A372-E543546D3FB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFDA6B17-0BEF-47E4-A372-E543546D3FB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {484F9CDA-E842-4272-A8D3-F3BA7A16B450}
+	EndGlobalSection
+EndGlobal
