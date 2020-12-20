@@ -14,22 +14,52 @@ namespace LinkFormsToPython
 {
     public partial class Form1 : Form
     {
+        
+        private string pythonExeDir = @"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\python.exe";
+        private string pythonScriptsLocation = @"C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets\Graphs\";
+
         public Form1()
         {
             InitializeComponent();
         }
 
-        private string pythonExeDir = @"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\python.exe";
+        
+        private void barGraphButton_click(object sender, EventArgs e)
+        {
+            runPythonScript("bargraph.py");
+        }
+        private void boxPlotButton_Click(object sender, EventArgs e)
+        {
+            runPythonScript("boxplot.py");
+        }
 
-       
+        private void dotPlotButton_Click(object sender, EventArgs e)
+        {
+            runPythonScript("dotplot.py"); ;
+        }
 
-        private void bargraphButton_click(object sender, EventArgs e)
+        private void histogramButton_Click(object sender, EventArgs e)
+        {
+            runPythonScript("histogram.py");
+        }
+
+        private void pieChartButton_Click(object sender, EventArgs e)
+        {
+            runPythonScript("piechart.py");
+        }
+
+        private void TestGraphButton_Click(object sender, EventArgs e)
+        {
+            runPythonScript("tesgraph.py");
+        }
+        
+        private void runPythonScript(string path)
         {
             ProcessStartInfo start = new ProcessStartInfo();
             start.FileName = pythonExeDir;
             start.UseShellExecute = false;
             start.RedirectStandardOutput = true;
-            string script = @"C:\Users\moham\source\repos\PythonApplication1\PythonApplication1\PythonApplication1.py";
+            string script = pythonScriptsLocation + path;
             start.Arguments = $"\"{script}\"";
             using (Process process = Process.Start(start))
             {
@@ -40,22 +70,5 @@ namespace LinkFormsToPython
                 }
             }
         }
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    ProcessStartInfo start = new ProcessStartInfo();
-        //    start.FileName = @"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\python.exe";
-        //    start.UseShellExecute = false;
-        //    start.RedirectStandardOutput = true;
-        //    string script = @"C:\Users\moham\source\repos\PythonApplication1\PythonApplication1\PythonApplication1.py";
-        //    start.Arguments = $"\"{script}\"";
-        //    using (Process process = Process.Start(start))
-        //    {
-        //        using (StreamReader reader = process.StandardOutput)
-        //        {
-        //            string result = reader.ReadToEnd();
-        //            Console.Write(result);
-        //        }
-        //    }
-        //}
-    }
+    } 
 }
