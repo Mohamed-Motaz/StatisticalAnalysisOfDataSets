@@ -1,3 +1,5 @@
+
+
 import math
 
 dummyData = [1,2,3,4,5,6,7,8,9,10]
@@ -50,7 +52,7 @@ def calcStandardDeviationGrouped(dataSet, frequencySet):
     """
     Calculate standard deviation for grouped data
     """
-    return sqrt(calcVarianceGrouped(dataSet, frequencySet))
+    return math.sqrt(calcVarianceGrouped(dataSet, frequencySet))
 
 def calcVarianceUnGrouped(dataSet):
     """
@@ -69,7 +71,7 @@ def calcStandardDeviationUnGrouped(dataSet):
     """
     Calculate standard deviation for ungrouped data
     """
-    return sqrt(calcVarianceUnGrouped(dataSet))
+    return math.sqrt(calcVarianceUnGrouped(dataSet))
 
 def calcZScoreUnGrouped(idx, dataSet):
     """
@@ -110,7 +112,7 @@ def calcBNode(dataSet1, dataSet2):
     Calculate b0 for two datasets
     """
     yMean = calcMeanUnGroupedData(dataSet2)
-    xMean = calcMeanGroupedData(dataSet1)
+    xMean = calcMeanUnGroupedData(dataSet1)
     bOne = calcBOne(dataSet1, dataSet2)
 
     return float(yMean - bOne * xMean) 
@@ -124,5 +126,8 @@ def calcPredictedY(dataSet1, dataset2, x):
     bNode = calcBNode(dataSet1, dataSet2)
 
     return float(bOne * x + bNode)
+
+def calcNumberOfClassesForHistogram(dataSet):
+    return int(math.ceil(math.sqrt(len(dataSet))))
 
 
