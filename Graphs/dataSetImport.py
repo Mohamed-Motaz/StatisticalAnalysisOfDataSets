@@ -95,6 +95,12 @@ def turnPercentageFromFloatToInt(percentageSmokersPerState):
         newPercentageSmokersPerState.append(int(percentageSmokersPerState[i]))
     return newPercentageSmokersPerState
 
+def roundDeathsToTheNearestThousand(deathsPerState):
+    newDeathsPerState = []
+    for i in range(0, len(deathsPerState)):
+        newDeathsPerState.append(round(deathsPerState[i], -3))
+    return newDeathsPerState
+
 def run():
     fillDictionariesFromCSV()
     fillListsFromDictionaries()

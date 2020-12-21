@@ -12,11 +12,17 @@ namespace LinkFormsToPython
 {
     public partial class FormulasForm : Form
     {
-        List<double> dataSet1 = new List<double>();
-        List<double> dataSet2 = new List<double>();
+
+        public static List<String> stateNames = new List<string>();
+        public static List<double> deathsPerState = new List<double>();
+        public static List<double> percentageSmokersPerState = new List<double>();
         public FormulasForm()
         {
             InitializeComponent();
+            ImportCsvDataSets.run();
+            stateNames = ImportCsvDataSets.stateNames;
+            deathsPerState = ImportCsvDataSets.deathsPerState;
+            percentageSmokersPerState = ImportCsvDataSets.percentageSmokersPerState;
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
@@ -37,7 +43,7 @@ namespace LinkFormsToPython
             }
             if (value > 1) value /= 100;
 
-            PercentageDeathsTextBox.Text = (Formulas.calcPredictedY(dataSet1, dataSet2, value)).ToString();
+            PercentageDeathsTextBox.Text = (Formulas.calcPredictedY(deathsPerState, percentageSmokersPerState, value)).ToString();
         }
 
         private void RevealButton_Click(object sender, EventArgs e)

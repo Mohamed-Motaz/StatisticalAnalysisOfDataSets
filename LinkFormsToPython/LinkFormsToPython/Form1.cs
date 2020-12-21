@@ -70,5 +70,11 @@ namespace LinkFormsToPython
                 }
             }
         }
+
+        private void ShowFormulasButton_Click(object sender, EventArgs e)
+        {
+            FormulasForm formulasForm = new FormulasForm();
+            formulasForm.Show();
+        }
     } 
 }

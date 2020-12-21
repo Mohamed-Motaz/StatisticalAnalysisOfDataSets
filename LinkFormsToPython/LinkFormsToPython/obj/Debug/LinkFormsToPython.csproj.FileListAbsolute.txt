@@ -8,3 +8,4 @@ C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets\LinkFormsToPython\LinkForms
 C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets\LinkFormsToPython\LinkFormsToPython\obj\Debug\LinkFormsToPython.csproj.CoreCompileInputs.cache
 C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets\LinkFormsToPython\LinkFormsToPython\obj\Debug\LinkFormsToPython.exe
 C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets\LinkFormsToPython\LinkFormsToPython\obj\Debug\LinkFormsToPython.pdb
+C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets\LinkFormsToPython\LinkFormsToPython\obj\Debug\LinkFormsToPython.FormulasForm.resources

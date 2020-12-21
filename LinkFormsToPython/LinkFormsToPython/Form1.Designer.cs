@@ -34,6 +34,7 @@
             this.histogramButton = new System.Windows.Forms.Button();
             this.dotPlotButton = new System.Windows.Forms.Button();
             this.boxPlotButton = new System.Windows.Forms.Button();
+            this.ShowFormulasButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // barGraphButton
@@ -96,11 +97,22 @@
             this.boxPlotButton.UseVisualStyleBackColor = true;
             this.boxPlotButton.Click += new System.EventHandler(this.boxPlotButton_Click);
             // 
+            // ShowFormulasButton
+            // 
+            this.ShowFormulasButton.Location = new System.Drawing.Point(207, 440);
+            this.ShowFormulasButton.Name = "ShowFormulasButton";
+            this.ShowFormulasButton.Size = new System.Drawing.Size(139, 59);
+            this.ShowFormulasButton.TabIndex = 6;
+            this.ShowFormulasButton.Text = "Show Formulas";
+            this.ShowFormulasButton.UseVisualStyleBackColor = true;
+            this.ShowFormulasButton.Click += new System.EventHandler(this.ShowFormulasButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(885, 537);
+            this.Controls.Add(this.ShowFormulasButton);
             this.Controls.Add(this.boxPlotButton);
             this.Controls.Add(this.dotPlotButton);
             this.Controls.Add(this.histogramButton);
@@ -121,6 +133,7 @@
         private System.Windows.Forms.Button histogramButton;
         private System.Windows.Forms.Button dotPlotButton;
         private System.Windows.Forms.Button boxPlotButton;
+        private System.Windows.Forms.Button ShowFormulasButton;
     }
 }
 

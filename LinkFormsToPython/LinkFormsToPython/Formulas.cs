@@ -28,9 +28,6 @@ namespace LinkFormsToPython
             return mean;
         }
 
-
-        
-
         public static double calcMeanGroupedData(List<double> dataSet, List<double> frequencySet)
         {
             /*
