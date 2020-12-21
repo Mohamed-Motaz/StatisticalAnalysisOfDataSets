@@ -161,7 +161,7 @@ namespace LinkFormsToPython
             
 
 
-        public static double calcPredictedY(List<double> dataSet1, List<double> dataSet2, int x)
+        public static double calcPredictedY(List<double> dataSet1, List<double> dataSet2, double x)
         {
             /*
             Calculate predicted y for two datasets given x
