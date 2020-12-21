@@ -8,133 +8,175 @@ namespace LinkFormsToPython
 {
     class Formulas
     {
-        dummyData = [1,2,3,4,5,6,7,8,9,10]
-        dummyData2 = [1,2,3,4,5,6,7,8,9,10]
-        dummyDataFrequency = [1,2,3,4,5,6,7,8,9,10]
+        List<double> dummyData = new List<double>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        List<double> dummyData2 = new List<double>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        List<double> dummyDataFrequency = new List<double>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-        def calcMeanUnGroupedData(dataSet):
-    """
-    Calculate mean for grouped data
-    """
-    mean = 0
-    for element in dataSet:
-        mean += element
-    mean = mean / len(dataSet)
-    return float (mean)
+        public static double calcMeanUnGroupedData(List<double> dataSet)
+        {
+            /*
+            Calculate mean for grouped data
+            */
+            double mean = 0;
+            foreach (int element in dataSet)
+            {
+                mean += element;
+            }
 
- print(calcMeanUnGroupedData(dummyData))
+            mean /= (double)(dataSet.Count);
 
-def calcMeanGroupedData(dataSet, frequencySet):
-    """
-    Calculate mean for grouped data
-    """
-    if len(dataSet) != len(frequencySet) :
-        raise Exception("Data set and frequency set sizes not equal")
+            return mean;
+        }
 
 
-    mean = 0
-    numberOfElements = 0    
-    for i in range(0, len(dataSet)) :
-        mean += dataSet[i] * frequencySet[i]
-        numberOfElements += frequencySet[i]
+        
 
-    mean = mean / numberOfElements
-    return float (mean)
+        public static double calcMeanGroupedData(List<double> dataSet, List<double> frequencySet)
+        {
+            /*
+            Calculate mean for grouped data
+            */
+            if (dataSet.Count != frequencySet.Count)
+                throw new Exception("Data set and frequency set sizes not equal");
 
- print(calcMeanGroupedData(dummyData, dummyDataFrequency))
 
-def calcVarianceGrouped(dataSet, frequencySet):
-    """
-    Calculate variance for grouped data
-    """
-    mean = calcMeanGroupedData(dataSet, frequencySet)
-    sum = 0
+            double mean = 0;
+            double numberOfElements = 0;
+            for (int i = 0; i < dataSet.Count; i++) {
 
-    for i in range(0, len(dataSet)) :
-        sum += pow(dataSet[i] - mean, 2) * frequencySet[i]
+                mean += dataSet[i] * frequencySet[i];
+                numberOfElements += frequencySet[i];
+            }
+            mean /= numberOfElements;
+            return mean;
+        }
+
+        public static double calcVarianceGrouped(List<double> dataSet, List<double> frequencySet)
+        {
+            /*
+            Calculate variance for grouped data
+            */
+            double mean = calcMeanGroupedData(dataSet, frequencySet);
+            double sum = 0;
+
+            for (int i = 0; i < dataSet.Count; i++)
+                sum += Math.Pow(dataSet[i] - mean, 2) * frequencySet[i];
+
+
+            return sum / (dataSet.Count - 1);
+        }
     
-    return float (sum / (len(dataSet) - 1))
 
-def calcStandardDeviationGrouped(dataSet, frequencySet):
-    """
-    Calculate standard deviation for grouped data
-    """
-    return math.sqrt(calcVarianceGrouped(dataSet, frequencySet))
+        public static double calcStandardDeviationGrouped(List<double> dataSet, List<double> frequencySet)
+        {
+            /*
+            Calculate standard deviation for grouped data
+            */
+            return Math.Sqrt(calcVarianceGrouped(dataSet, frequencySet));
+        }
+    
 
-def calcVarianceUnGrouped(dataSet):
-    """
-    Calculate variance for ungrouped data 
-    """
-    mean = calcMeanUnGroupedData(dataSet)
-    sum = 0
+        public static double calcVarianceUnGrouped(List<double> dataSet)
+        {
+            /*
+            Calculate variance for ungrouped data 
+            */
+            double mean = calcMeanUnGroupedData(dataSet);
+            double sum = 0;
 
-    for element in dataSet:
-        sum += pow(element - mean, 2)
+            foreach (double element in dataSet)
+                sum += Math.Pow(element - mean, 2);
 
-    return float (sum / (len(dataSet) - 1))
-
-
-def calcStandardDeviationUnGrouped(dataSet):
-    """
-    Calculate standard deviation for ungrouped data
-    """
-    return math.sqrt(calcVarianceUnGrouped(dataSet))
-
-def calcZScoreUnGrouped(idx, dataSet):
-    """
-    Calculate z-scroe for ungrouped data
-    """
-    return (dataSet[idx] - calcMeanUnGroupedData(dataSet) / calcStandardDeviationUnGrouped(dataSet))
-
-def calcPearsonR(dataSet1, dataSet2):
-    """
-    Calculate Pearson's R for two datasets
-    """
-    sum = 0
-
-    for i in range(0, len(dataSet1)) :
-        sum += calcZScoreUnGrouped(i, dataSet1) * calcZScoreUnGrouped(i, dataSet2)
-
-    return float (sum / (len(dataSet1) - 1))
-
-def calcCoefficientOfDetermination(dataSet1, dataSet2):
-    """
-    Calculate coefficient of determination for two datasets
-    """
-    return float (pow(calcPearsonR(dataSet1, dataSet2), 2))
-
-def calcBOne(dataSet1, dataSet2):
-    """
-    Calculate b1 for two datasets
-    """
-    r = calcPearsonR(dataSet1, dataSet2)
-    sX = calcStandardDeviationUnGrouped(dataSet1)
-    sY = calcStandardDeviationUnGrouped(dataSet2)
-
-    return float ((sY / sX)  * r )
+            return (sum / (dataSet.Count - 1));
+        }
+            
 
 
-def calcBNode(dataSet1, dataSet2):
-    """
-    Calculate b0 for two datasets
-    """
-    yMean = calcMeanUnGroupedData(dataSet2)
-    xMean = calcMeanUnGroupedData(dataSet1)
-    bOne = calcBOne(dataSet1, dataSet2)
+        public static double calcStandardDeviationUnGrouped(List<double> dataSet)
+        {
+            /*
+            Calculate standard deviation for ungrouped data
+            */
+            return Math.Sqrt(calcVarianceUnGrouped(dataSet));
+        }
+            
 
-    return float (yMean - bOne* xMean) 
+        public static double calcZScoreUnGrouped(int idx, List<double> dataSet)
+        {
+            /*
+            Calculate z-scroe for ungrouped data
+            */
+            return (dataSet[idx] - calcMeanUnGroupedData(dataSet)) / calcStandardDeviationUnGrouped(dataSet);
+        }
+           
+
+        public static double calcPearsonR(List<double> dataSet1, List<double> dataSet2)
+        {
+            /*
+            Calculate Pearson's R for two datasets
+            */
+            double sum = 0;
+
+            for (int i = 0; i < dataSet1.Count; i++)
+                sum += calcZScoreUnGrouped(i, dataSet1) * calcZScoreUnGrouped(i, dataSet2);
+
+            return (sum / (dataSet1.Count - 1));
+        }
+            
+
+        public static double calcCoefficientOfDetermination(List<double> dataSet1, List<double> dataSet2)
+        {
+            /*
+            Calculate coefficient of determination for two datasets
+            */
+            return Math.Pow(calcPearsonR(dataSet1, dataSet2), 2);
+        }
+            
+
+        public static double calcBOne(List<double> dataSet1, List<double> dataSet2)
+        {
+            /*
+            Calculate b1 for two datasets
+            */
+            double r = calcPearsonR(dataSet1, dataSet2);
+            double sX = calcStandardDeviationUnGrouped(dataSet1);
+            double sY = calcStandardDeviationUnGrouped(dataSet2);
+
+            return (sY / sX) * r;
+        }
+            
 
 
-def calcPredictedY(dataSet1, dataSet2, x):
-    """
-    Calculate predicted y for two datasets given x
-    """
-    bOne = calcBOne(dataSet1, dataSet2)
-    bNode = calcBNode(dataSet1, dataSet2)
+        public static double calcBNode(List<double> dataSet1, List<double> dataSet2)
+        {
+            /*
+            Calculate b0 for two datasets
+            */
+            double yMean = calcMeanUnGroupedData(dataSet2);
+            double xMean = calcMeanUnGroupedData(dataSet1);
+            double bOne = calcBOne(dataSet1, dataSet2); 
 
-    return float (bOne* x + bNode)
+            return (yMean - bOne * xMean); 
+        }
+            
 
-def calcNumberOfClassesForHistogram(dataSet):
-    return int (math.ceil(math.sqrt(len(dataSet))))
+
+        public static double calcPredictedY(List<double> dataSet1, List<double> dataSet2, int x)
+        {
+            /*
+            Calculate predicted y for two datasets given x
+            */
+            double bOne = calcBOne(dataSet1, dataSet2);
+            double bNode = calcBNode(dataSet1, dataSet2);
+
+            return (bOne * x + bNode);
+        }
+            
+
+        public static int calcNumberOfClassesForHistogram(List<double> dataSet)
+        {
+            return (int)(Math.Ceiling(Math.Sqrt(dataSet.Count)));
+        }
+            
     }
-}
+}   
