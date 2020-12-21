@@ -35,7 +35,7 @@ namespace LinkFormsToPython
             double value;
             try
             {
-                value = Double.Parse(PercentageMasksWornTextBox.Text);
+                value = double.Parse(PercentageMasksWornTextBox.Text);
             }catch (Exception)
             {
                 MessageBox.Show("Please enter a valid value");
@@ -48,6 +48,30 @@ namespace LinkFormsToPython
 
         private void RevealButton_Click(object sender, EventArgs e)
         {
+            MeanDeathsTextBox.Text = Formulas.calcMeanUnGroupedData(deathsPerState).ToString();
+            MeanPercentageSmokersTextBox.Text = Formulas.calcMeanUnGroupedData(percentageSmokersPerState).ToString();
+
+            VarianceDeathsTextBox.Text = Formulas.calcVarianceUnGrouped(deathsPerState).ToString();
+            VariancePercentageSmokersTextBox.Text = Formulas.calcVarianceUnGrouped(percentageSmokersPerState).ToString();
+
+            StandardDeviationDeathsTextBox.Text = Formulas.calcStandardDeviationUnGrouped(deathsPerState).ToString();
+            StandardDeviationPercentageSmokersTextBox.Text = Formulas.calcStandardDeviationUnGrouped(percentageSmokersPerState).ToString();
+
+            double val = Formulas.calcPearsonR(deathsPerState, percentageSmokersPerState);
+            PearsonsRTextBox.Text = val.ToString();
+
+            if (val >= 0.7)
+                textBox2.Text = "strong positive linear";
+            else if (val >= 0.3)
+                textBox2.Text = "medium positive linear";
+            else if (val > 0.0)
+                textBox2.Text = "weak positive linear";
+            else if (val >= -0.3)
+                textBox2.Text = "weak negaive linear";
+            else if (val >= -0.7)
+                textBox2.Text = "medium negative linear";
+            else if (val >= -1)
+                textBox2.Text = "strong negative linear";
 
         }
     }
