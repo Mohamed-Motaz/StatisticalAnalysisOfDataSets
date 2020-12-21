@@ -45,7 +45,7 @@ def getIdxes(row):
         if row[i] == 'percent_smokers':
             idxSmoking = i
     
-    return {idxState, idxDeaths, idxSmoking}
+    return idxState, idxDeaths, idxSmoking
 
 
 
@@ -65,11 +65,10 @@ def fillDictionariesFromCSV():
                 idxState, idxDeaths, idxSmoking = getIdxes(row)
                 line_count += 1
                 continue
-
             if  row[idxState] in stateAndDeathsDictionary:
-                stateAndDeathsDictionary[row[idxState]] += int(math.ceil(float(row[idxDeaths])))
+                stateAndDeathsDictionary[row[idxState]] += int((float(row[idxDeaths])))
             else:
-                stateAndDeathsDictionary[row[idxState]] = int(math.ceil(float(row[idxDeaths])))
+                stateAndDeathsDictionary[row[idxState]] = int((float(row[idxDeaths])))
             stateAndSmokingDictionary[row[idxState]] = float(row[idxSmoking])
             #print(f'Column names are {", ".join(row)}')
         
@@ -84,6 +83,17 @@ def fillListsFromDictionaries():
         percentageSmokersPerState.append(stateAndSmokingDictionary[key])
     return
     
+def abbreviateStateNames(statesNames):
+    newStatesNames = []
+    for i in range(0, len(stateNames)):
+        newStatesNames.append(stateNames[i][0] + stateNames[i][1])
+    return newStatesNames
+
+def turnPercentageFromFloatToInt(percentageSmokersPerState):
+    newPercentageSmokersPerState = []
+    for i in range(0, len(percentageSmokersPerState)):
+        newPercentageSmokersPerState.append(int(percentageSmokersPerState[i]))
+    return newPercentageSmokersPerState
 
 def run():
     fillDictionariesFromCSV()

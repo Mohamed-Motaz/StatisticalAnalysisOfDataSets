@@ -7,14 +7,10 @@ x = dataSetImport.abbreviateStateNames(stateNames)
 y = deathsPerState
 z = percentageSmokersPerState
 
-xValues = x
-yValues = y
-plt.plot(xValues, yValues, 'go', markersize=8)
 
-# axis labeling
-plt.xlabel('Numbers')
-plt.ylabel('Values')
-
-# figure name
-plt.title('Dot plot graph')
+plt.scatter(x , z , label="States/Percentage of Smokers" , color = "blue" , marker='o' )
+plt.title("Scatter Plot")
+plt.xlabel("States")
+plt.ylabel("Percentage of Smokers")
+plt.legend()
 plt.show()

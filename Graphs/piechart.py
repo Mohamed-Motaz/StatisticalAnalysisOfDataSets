@@ -1,6 +1,11 @@
-#salma
 import matplotlib.pyplot as plt
+import dataSetImport
+stateNames, deathsPerState, percentageSmokersPerState = dataSetImport.run()
 
+
+x = dataSetImport.abbreviateStateNames(stateNames)
+y = deathsPerState
+z = percentageSmokersPerState
 Tasks = [300,500,700]
 
 my_labels = 'Tasks Pending','Tasks Ongoing','Tasks Completed'
