@@ -2,11 +2,11 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import dataSetImport
-stateNames, deathsPerState, percentageSmokersPerState = dataSetImport.run()
+stateNames, percentageDeathsPerState, percentageSmokersPerState = dataSetImport.run()
 
 
 x = dataSetImport.abbreviateStateNames(stateNames)
-y = deathsPerState
+y = percentageDeathsPerState
 z = dataSetImport.turnPercentageFromFloatToInt(percentageSmokersPerState)
 
 
@@ -21,7 +21,7 @@ fig, ax = plt.subplots()
 rects1 = ax.bar(x, deathsInState, width,color="orange",label='Deaths')
 
 # Add some text for labels, title and custom x-axis tick labels, etc.
-ax.set_ylabel('Number of Deaths')
+ax.set_ylabel('Percentage of Deaths')
 ax.set_xlabel('States')
 ax.set_xticks(x)
 ax.set_xticklabels(labels)

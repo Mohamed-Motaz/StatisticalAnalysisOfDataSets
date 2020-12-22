@@ -17,6 +17,8 @@ namespace LinkFormsToPython
         
         private string pythonExeDir = @"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\python.exe";
         private string pythonScriptsLocation = @"C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets\Graphs\";
+        private string statesToDeaths = "StatesToDeaths.py";
+        private string statesToSmokers = "StatesToSmokers.py";
 
         public Form1()
         {
@@ -26,32 +28,63 @@ namespace LinkFormsToPython
         
         private void barGraphButton_click(object sender, EventArgs e)
         {
-            runPythonScript("bargraph.py");
+            runPythonScript("bargraph" + statesToDeaths);
         }
         private void boxPlotButton_Click(object sender, EventArgs e)
         {
-            runPythonScript("boxplot.py");
+            runPythonScript("boxplot" + statesToDeaths);
         }
 
         private void dotPlotButton_Click(object sender, EventArgs e)
         {
-            runPythonScript("dotplot.py"); ;
+            runPythonScript("dotplot"+ statesToDeaths);
         }
 
         private void histogramButton_Click(object sender, EventArgs e)
         {
-            runPythonScript("histogram.py");
+            runPythonScript("histogram" + statesToDeaths);
         }
 
         private void pieChartButton_Click(object sender, EventArgs e)
         {
-            runPythonScript("piechart.py");
+            runPythonScript("piechart" + statesToDeaths);
         }
 
-        private void TestGraphButton_Click(object sender, EventArgs e)
+        private void ScatterPlotButton_Click(object sender, EventArgs e)
         {
-            runPythonScript("tesgraph.py");
+            runPythonScript("scatterplot" + statesToDeaths);
         }
+        
+        private void button6_Click(object sender, EventArgs e)
+        {
+            runPythonScript("bargraph" + statesToSmokers);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            runPythonScript("boxplot" + statesToSmokers);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            runPythonScript("dotplot" + statesToSmokers);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            runPythonScript("histogram" + statesToSmokers);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            runPythonScript("piechart" + statesToSmokers);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            runPythonScript("scatterplot" + statesToSmokers);
+
+        } 
         
         private void runPythonScript(string path)
         {

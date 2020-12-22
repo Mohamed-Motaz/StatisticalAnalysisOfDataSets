@@ -2,11 +2,12 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import dataSetImport
-stateNames, deathsPerState, percentageSmokersPerState = dataSetImport.run()
+stateNames, percentageDeathsPerState, percentageSmokersPerState = dataSetImport.run()
 
 
 x = stateNames
-y = dataSetImport.roundDeathsToTheNearestThousand(deathsPerState)
+#y = dataSetImport.roundDeathsToTheNearestThousand(deathsPerState)
+y = percentageDeathsPerState
 z = percentageSmokersPerState
 
 dict={}
@@ -26,7 +27,7 @@ for i in xvalues:
 plt.plot(xvalues, zvalues, 'go', markersize=8)
 
 # axis labeling
-plt.xlabel('Deaths Per State')
+plt.xlabel('Percentage of Deaths')
 plt.ylabel('Frequency')
 
 # figure name

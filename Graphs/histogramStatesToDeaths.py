@@ -2,16 +2,16 @@ import math
 import matplotlib.pyplot as plt
 #import Formulas.formulas
 import dataSetImport
-stateNames, deathsPerState, percentageSmokersPerState = dataSetImport.run()
+stateNames, percentageDeathsPerState, percentageSmokersPerState = dataSetImport.run()
 
 
 x = stateNames
-y = deathsPerState
+y = percentageDeathsPerState
 z = percentageSmokersPerState
 
 
 plt.hist(y , bins= (math.ceil(math.sqrt(len(y)))) , color='r' )
 plt.title("Histogram")
-plt.xlabel("Deaths Per State")
+plt.xlabel("Percentage of Deaths")
 plt.ylabel("Frequency")
 plt.show()

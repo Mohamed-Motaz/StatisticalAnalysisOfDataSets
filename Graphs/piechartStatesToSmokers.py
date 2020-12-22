@@ -1,16 +1,16 @@
 import matplotlib.pyplot as plt
 import dataSetImport
-stateNames, deathsPerState, percentageSmokersPerState = dataSetImport.run()
+stateNames, percentageDeathsPerState, percentageSmokersPerState = dataSetImport.run()
 
 
 x = stateNames
-y = deathsPerState
+y = percentageDeathsPerState
 z = percentageSmokersPerState
 Tasks = z
 
 my_labels = x
 
 plt.pie(Tasks, labels=my_labels, autopct='%1.1f%%', startangle=15, shadow = True)
-plt.title('Perecentage Smokers Per State')
+plt.title('Perecentage of Smokers')
 plt.axis('equal')
 plt.show()

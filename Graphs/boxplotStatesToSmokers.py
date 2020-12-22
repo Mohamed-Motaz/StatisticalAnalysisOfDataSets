@@ -1,11 +1,11 @@
 import matplotlib.pyplot as plt 
 import numpy as np 
 import dataSetImport
-stateNames, deathsPerState, percentageSmokersPerState = dataSetImport.run()
+stateNames, percentageDeathsPerState, percentageSmokersPerState = dataSetImport.run()
 
 
 x = dataSetImport.abbreviateStateNames(stateNames)
-y = deathsPerState
+y = percentageDeathsPerState
 z = percentageSmokersPerState
 
     

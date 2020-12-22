@@ -26,6 +26,7 @@ dataSetPath = r"C:\Users\moham\Desktop\imputed-data.csv"
 
 stateAndDeathsDictionary = dict()
 stateAndSmokingDictionary = dict()
+stateAndCovidPositiveDictionary = dict()
 stateNames = []
 deathsPerState = []
 percentageSmokersPerState = []
@@ -44,8 +45,10 @@ def getIdxes(row):
             idxDeaths = i
         if row[i] == 'percent_smokers':
             idxSmoking = i
+        if row[i] == 'total_population':
+            idxCovidPositive = i    
     
-    return idxState, idxDeaths, idxSmoking
+    return idxState, idxDeaths, idxSmoking, idxCovidPositive
 
 
 
@@ -62,24 +65,26 @@ def fillDictionariesFromCSV():
             
             if line_count == 0:
                 #dont add column names to the dictionary
-                idxState, idxDeaths, idxSmoking = getIdxes(row)
+                idxState, idxDeaths, idxSmoking, idxCovidPositive = getIdxes(row)
                 line_count += 1
                 continue
             if  row[idxState] in stateAndDeathsDictionary:
                 stateAndDeathsDictionary[row[idxState]] += int((float(row[idxDeaths])))
             else:
                 stateAndDeathsDictionary[row[idxState]] = int((float(row[idxDeaths])))
+
             stateAndSmokingDictionary[row[idxState]] = float(row[idxSmoking])
+            stateAndCovidPositiveDictionary[row[idxState]] = float(row[idxCovidPositive])
             #print(f'Column names are {", ".join(row)}')
         
 stateNames = []
-deathsPerState = []
+percentageDeathsPerState = []  #deaths over covid total
 percentageSmokersPerState = []
 def fillListsFromDictionaries():
     counter = 0
     for key, value in stateAndDeathsDictionary.items():
         stateNames.append(key)
-        deathsPerState.append(value)
+        percentageDeathsPerState.append(round(float(value / float(stateAndCovidPositiveDictionary[key])), 2))
         percentageSmokersPerState.append(stateAndSmokingDictionary[key])
     return
     
@@ -95,16 +100,16 @@ def turnPercentageFromFloatToInt(percentageSmokersPerState):
         newPercentageSmokersPerState.append(int(percentageSmokersPerState[i]))
     return newPercentageSmokersPerState
 
-def roundDeathsToTheNearestThousand(deathsPerState):
-    newDeathsPerState = []
-    for i in range(0, len(deathsPerState)):
-        newDeathsPerState.append(round(deathsPerState[i], -3))
-    return newDeathsPerState
+def roundDeathsToTheNearestThousand(percentageDeathsPerStat):
+    newPercentageDeathsPerState = []
+    for i in range(0, len(percentageDeathsPerStat)):
+        newPercentageDeathsPerState.append(round(percentageDeathsPerStat[i], -3))
+    return newPercentageDeathsPerState
 
 def run():
     fillDictionariesFromCSV()
     fillListsFromDictionaries()
-    return stateNames, deathsPerState, percentageSmokersPerState
+    return stateNames, percentageDeathsPerState, percentageSmokersPerState
 
 
 

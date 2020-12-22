@@ -2,11 +2,11 @@ import math
 import matplotlib.pyplot as plt
 #import Formulas.formulas
 import dataSetImport
-stateNames, deathsPerState, percentageSmokersPerState = dataSetImport.run()
+stateNames, percentageDeathsPerState, percentageSmokersPerState = dataSetImport.run()
 
 
 x = stateNames
-y = deathsPerState
+y = percentageDeathsPerState
 z = percentageSmokersPerState
 
 

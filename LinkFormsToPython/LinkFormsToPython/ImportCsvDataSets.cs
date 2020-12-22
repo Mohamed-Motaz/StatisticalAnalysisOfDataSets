@@ -12,8 +12,9 @@ namespace LinkFormsToPython
 
         public static Dictionary<string, int> stateAndDeathsDictionary = new Dictionary<string, int>();
         public static Dictionary<string, double> stateAndSmokingDictionary = new Dictionary<string, double>();
+        public static Dictionary<string, double> stateAndCovidPosDictionary = new Dictionary<string, double>();
         public static List<String> stateNames = new List<string>();
-        public static List<double> deathsPerState = new List<double>();
+        public static List<double> percentageDeathsPerState = new List<double>();
         public static List<double> percentageSmokersPerState = new List<double>();
 
         private static string dataSetPath = @"C:\Users\moham\Desktop\imputed-data.csv";
@@ -36,6 +37,8 @@ namespace LinkFormsToPython
                     dict["idxDeaths"] = i;
                 if (row[i] == "percent_smokers")
                     dict["idxSmoking"] = i;
+                if (row[i] == "total_population")
+                    dict["idxCovidPositive"] = i;
             }
             return dict;
         }
@@ -67,6 +70,7 @@ namespace LinkFormsToPython
                     else
                         stateAndDeathsDictionary[row[getIdxs["idxState"]]] = Convert.ToInt32((double.Parse(row[getIdxs["idxDeaths"]])));
                     stateAndSmokingDictionary[row[getIdxs["idxState"]]] = double.Parse(row[getIdxs["idxSmoking"]]);
+                    stateAndCovidPosDictionary[row[getIdxs["idxState"]]] = double.Parse(row[getIdxs["idxCovidPositive"]]);
                 }
             }
         
@@ -76,7 +80,7 @@ namespace LinkFormsToPython
         {
             foreach (KeyValuePair<string,int> entry in stateAndDeathsDictionary){
                 stateNames.Add(entry.Key);
-                deathsPerState.Add(entry.Value);
+                percentageDeathsPerState.Add((double)entry.Value / (double)stateAndCovidPosDictionary[entry.Key]);
                 percentageSmokersPerState.Add(stateAndSmokingDictionary[entry.Key]);
             }
                 
