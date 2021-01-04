@@ -52,6 +52,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.StandardDeviationPercentageSmokersTextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // MeanDeathsLabel
@@ -72,7 +80,7 @@
             // 
             // StandardDeviationDeathsTextBox
             // 
-            this.StandardDeviationDeathsTextBox.Location = new System.Drawing.Point(298, 187);
+            this.StandardDeviationDeathsTextBox.Location = new System.Drawing.Point(298, 222);
             this.StandardDeviationDeathsTextBox.Name = "StandardDeviationDeathsTextBox";
             this.StandardDeviationDeathsTextBox.Size = new System.Drawing.Size(100, 20);
             this.StandardDeviationDeathsTextBox.TabIndex = 3;
@@ -80,7 +88,7 @@
             // StandardDeviationLabel
             // 
             this.StandardDeviationLabel.AutoSize = true;
-            this.StandardDeviationLabel.Location = new System.Drawing.Point(50, 193);
+            this.StandardDeviationLabel.Location = new System.Drawing.Point(50, 228);
             this.StandardDeviationLabel.Name = "StandardDeviationLabel";
             this.StandardDeviationLabel.Size = new System.Drawing.Size(242, 13);
             this.StandardDeviationLabel.TabIndex = 2;
@@ -88,7 +96,7 @@
             // 
             // VarianceDeathsTextBox
             // 
-            this.VarianceDeathsTextBox.Location = new System.Drawing.Point(252, 134);
+            this.VarianceDeathsTextBox.Location = new System.Drawing.Point(249, 181);
             this.VarianceDeathsTextBox.Name = "VarianceDeathsTextBox";
             this.VarianceDeathsTextBox.Size = new System.Drawing.Size(100, 20);
             this.VarianceDeathsTextBox.TabIndex = 5;
@@ -96,7 +104,7 @@
             // VarianceLabel
             // 
             this.VarianceLabel.AutoSize = true;
-            this.VarianceLabel.Location = new System.Drawing.Point(50, 140);
+            this.VarianceLabel.Location = new System.Drawing.Point(47, 187);
             this.VarianceLabel.Name = "VarianceLabel";
             this.VarianceLabel.Size = new System.Drawing.Size(196, 13);
             this.VarianceLabel.TabIndex = 4;
@@ -223,7 +231,7 @@
             // 
             // VariancePercentageSmokersTextBox
             // 
-            this.VariancePercentageSmokersTextBox.Location = new System.Drawing.Point(639, 137);
+            this.VariancePercentageSmokersTextBox.Location = new System.Drawing.Point(636, 184);
             this.VariancePercentageSmokersTextBox.Name = "VariancePercentageSmokersTextBox";
             this.VariancePercentageSmokersTextBox.Size = new System.Drawing.Size(100, 20);
             this.VariancePercentageSmokersTextBox.TabIndex = 21;
@@ -231,7 +239,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(424, 137);
+            this.label8.Location = new System.Drawing.Point(421, 184);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(203, 13);
             this.label8.TabIndex = 20;
@@ -239,7 +247,7 @@
             // 
             // StandardDeviationPercentageSmokersTextBox
             // 
-            this.StandardDeviationPercentageSmokersTextBox.Location = new System.Drawing.Point(693, 186);
+            this.StandardDeviationPercentageSmokersTextBox.Location = new System.Drawing.Point(693, 221);
             this.StandardDeviationPercentageSmokersTextBox.Name = "StandardDeviationPercentageSmokersTextBox";
             this.StandardDeviationPercentageSmokersTextBox.Size = new System.Drawing.Size(100, 20);
             this.StandardDeviationPercentageSmokersTextBox.TabIndex = 23;
@@ -247,17 +255,89 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(427, 190);
+            this.label9.Location = new System.Drawing.Point(427, 225);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(249, 13);
             this.label9.TabIndex = 22;
             this.label9.Text = "The standard deviation of percentage of smokers is";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(606, 120);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 27;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(424, 123);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(176, 13);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "The mode percentage of smokers is";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(249, 120);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 25;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(50, 126);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(181, 13);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "The mode of percentage of deaths is";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(606, 151);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 31;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(424, 154);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(184, 13);
+            this.label12.TabIndex = 30;
+            this.label12.Text = "The median percentage of smokers is";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(249, 151);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 29;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(50, 157);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(189, 13);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "The median of percentage of deaths is";
             // 
             // FormulasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 561);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.StandardDeviationPercentageSmokersTextBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.VariancePercentageSmokersTextBox);
@@ -315,5 +395,13 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox StandardDeviationPercentageSmokersTextBox;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label13;
     }
 }

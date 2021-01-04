@@ -43,7 +43,7 @@ namespace LinkFormsToPython
             }
             if (value > 1) value /= 100;
 
-            PercentageDeathsTextBox.Text = (Formulas.calcPredictedY(percentageDeathsPerState, percentageSmokersPerState, value)).ToString();
+            PercentageDeathsTextBox.Text = Math.Round(Formulas.calcPredictedY(percentageDeathsPerState, percentageSmokersPerState, value), 2).ToString();
         }
 
         private void RevealButton_Click(object sender, EventArgs e)
@@ -77,6 +77,11 @@ namespace LinkFormsToPython
                 textBox2.Text = "strong negative linear";
             else if (val == -1)
                 textBox2.Text = "perfect negative linear";
+
+            textBox3.Text = Math.Round(Formulas.calcMode(percentageDeathsPerState), 2).ToString();
+            textBox1.Text = Math.Round(Formulas.calcMode(percentageSmokersPerState), 2).ToString();
+            textBox5.Text = Math.Round(Formulas.calcMedian(percentageDeathsPerState), 2).ToString();
+            textBox4.Text = Math.Round(Formulas.calcMedian(percentageSmokersPerState), 2).ToString();
 
         }
     }

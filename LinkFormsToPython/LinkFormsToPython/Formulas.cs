@@ -174,6 +174,45 @@ namespace LinkFormsToPython
         {
             return (int)(Math.Ceiling(Math.Sqrt(dataSet.Count)));
         }
+
+        public static double calcMedian(List<double> dataSet)
+        {
+            dataSet.Sort();
+            double median;
+            int mid = dataSet.Count / 2;
+            if (dataSet.Count % 2 == 0)
+                median = (dataSet[mid] + dataSet[mid - 1]) / 2.0;
+
+            else
+                median = dataSet[mid];
+
+            return median;
+        }
+
+        public static double calcMode(List<double> dataSet)
+        {
+            Dictionary<double, int> dict = new Dictionary<double, int>();
+            //round all values to 2 decimal points
+            for (int i = 0; i < dataSet.Count; i++)
+            {
+                if (dict.ContainsKey(Math.Round(dataSet[i], 2)))
+                    dict[Math.Round(dataSet[i], 2)]++;
+                else dict[Math.Round(dataSet[i], 2)] = 1;
+            }
+
+            int mxCtr = 0;
+            double val = 0.0;
+
+            foreach( KeyValuePair<double, int> pair in dict)
+            {
+                if (pair.Value > mxCtr)
+                {
+                    val = pair.Key;
+                    mxCtr = pair.Value;
+                }
+            }
+            return val;
+        }
             
     }
 }   
