@@ -83,7 +83,11 @@ namespace LinkFormsToPython
                 percentageDeathsPerState.Add((double)entry.Value / (double)stateAndCovidPosDictionary[entry.Key]);
                 percentageSmokersPerState.Add(stateAndSmokingDictionary[entry.Key]);
             }
-                
+
+            //percentageDeathsPerState = new List<double>() { 38, 41, 45, 48, 51, 53, 57, 61, 65 };
+            //percentageSmokersPerState = new List<double>() { 116, 120, 123, 131, 142, 145, 148, 150, 152 };
+
+
         }
             
 

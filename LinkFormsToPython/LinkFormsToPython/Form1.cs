@@ -84,8 +84,13 @@ namespace LinkFormsToPython
         {
             runPythonScript("scatterplot" + statesToSmokers);
 
-        } 
-        
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            runPythonScript("regressionAnalysis.py");
+        }
+
         private void runPythonScript(string path)
         {
             ProcessStartInfo start = new ProcessStartInfo();
@@ -109,5 +114,7 @@ namespace LinkFormsToPython
             FormulasForm formulasForm = new FormulasForm();
             formulasForm.Show();
         }
+
+       
     } 
 }
