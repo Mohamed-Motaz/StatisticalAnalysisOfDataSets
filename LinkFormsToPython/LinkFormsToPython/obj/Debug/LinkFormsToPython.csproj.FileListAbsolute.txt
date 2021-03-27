@@ -9,3 +9,14 @@ C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets\LinkFormsToPython\LinkForms
 C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets\LinkFormsToPython\LinkFormsToPython\obj\Debug\LinkFormsToPython.exe
 C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets\LinkFormsToPython\LinkFormsToPython\obj\Debug\LinkFormsToPython.pdb
 C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets\LinkFormsToPython\LinkFormsToPython\obj\Debug\LinkFormsToPython.FormulasForm.resources
+C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets - Copy\LinkFormsToPython\LinkFormsToPython\bin\Debug\LinkFormsToPython.exe.config
+C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets - Copy\LinkFormsToPython\LinkFormsToPython\bin\Debug\LinkFormsToPython.exe
+C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets - Copy\LinkFormsToPython\LinkFormsToPython\bin\Debug\LinkFormsToPython.pdb
+C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets - Copy\LinkFormsToPython\LinkFormsToPython\obj\Debug\LinkFormsToPython.csprojAssemblyReference.cache
+C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets - Copy\LinkFormsToPython\LinkFormsToPython\obj\Debug\LinkFormsToPython.Form1.resources
+C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets - Copy\LinkFormsToPython\LinkFormsToPython\obj\Debug\LinkFormsToPython.FormulasForm.resources
+C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets - Copy\LinkFormsToPython\LinkFormsToPython\obj\Debug\LinkFormsToPython.Properties.Resources.resources
+C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets - Copy\LinkFormsToPython\LinkFormsToPython\obj\Debug\LinkFormsToPython.csproj.GenerateResource.cache
+C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets - Copy\LinkFormsToPython\LinkFormsToPython\obj\Debug\LinkFormsToPython.csproj.CoreCompileInputs.cache
+C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets - Copy\LinkFormsToPython\LinkFormsToPython\obj\Debug\LinkFormsToPython.exe
+C:\Users\moham\Desktop\StatisticalAnalysisOfDataSets - Copy\LinkFormsToPython\LinkFormsToPython\obj\Debug\LinkFormsToPython.pdb

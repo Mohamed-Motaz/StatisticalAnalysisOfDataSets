@@ -49,178 +49,214 @@
             // 
             // barGraphButton
             // 
-            this.barGraphButton.Location = new System.Drawing.Point(50, 137);
+            this.barGraphButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.barGraphButton.FlatAppearance.BorderSize = 0;
+            this.barGraphButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barGraphButton.Location = new System.Drawing.Point(4, 100);
             this.barGraphButton.Name = "barGraphButton";
-            this.barGraphButton.Size = new System.Drawing.Size(104, 36);
+            this.barGraphButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.barGraphButton.Size = new System.Drawing.Size(128, 36);
             this.barGraphButton.TabIndex = 0;
             this.barGraphButton.Text = "Bar Graph";
-            this.barGraphButton.UseVisualStyleBackColor = true;
+            this.barGraphButton.UseVisualStyleBackColor = false;
             this.barGraphButton.Click += new System.EventHandler(this.barGraphButton_click);
             // 
             // ScatterPlotButton
             // 
-            this.ScatterPlotButton.Location = new System.Drawing.Point(210, 362);
+            this.ScatterPlotButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ScatterPlotButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScatterPlotButton.Location = new System.Drawing.Point(4, 369);
             this.ScatterPlotButton.Name = "ScatterPlotButton";
-            this.ScatterPlotButton.Size = new System.Drawing.Size(104, 36);
+            this.ScatterPlotButton.Size = new System.Drawing.Size(128, 36);
             this.ScatterPlotButton.TabIndex = 1;
             this.ScatterPlotButton.Text = "Scatter Plot";
-            this.ScatterPlotButton.UseVisualStyleBackColor = true;
+            this.ScatterPlotButton.UseVisualStyleBackColor = false;
             this.ScatterPlotButton.Click += new System.EventHandler(this.ScatterPlotButton_Click);
             // 
             // pieChartButton
             // 
-            this.pieChartButton.Location = new System.Drawing.Point(210, 241);
+            this.pieChartButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pieChartButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pieChartButton.Location = new System.Drawing.Point(4, 314);
             this.pieChartButton.Name = "pieChartButton";
-            this.pieChartButton.Size = new System.Drawing.Size(104, 36);
+            this.pieChartButton.Size = new System.Drawing.Size(128, 36);
             this.pieChartButton.TabIndex = 2;
             this.pieChartButton.Text = "Pie Chart";
-            this.pieChartButton.UseVisualStyleBackColor = true;
+            this.pieChartButton.UseVisualStyleBackColor = false;
             this.pieChartButton.Click += new System.EventHandler(this.pieChartButton_Click);
             // 
             // histogramButton
             // 
-            this.histogramButton.Location = new System.Drawing.Point(210, 137);
+            this.histogramButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.histogramButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.histogramButton.Location = new System.Drawing.Point(4, 261);
             this.histogramButton.Name = "histogramButton";
-            this.histogramButton.Size = new System.Drawing.Size(104, 36);
+            this.histogramButton.Size = new System.Drawing.Size(128, 36);
             this.histogramButton.TabIndex = 3;
             this.histogramButton.Text = "Histogram";
-            this.histogramButton.UseVisualStyleBackColor = true;
+            this.histogramButton.UseVisualStyleBackColor = false;
             this.histogramButton.Click += new System.EventHandler(this.histogramButton_Click);
             // 
             // dotPlotButton
             // 
-            this.dotPlotButton.Location = new System.Drawing.Point(50, 362);
+            this.dotPlotButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dotPlotButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dotPlotButton.Location = new System.Drawing.Point(4, 208);
             this.dotPlotButton.Name = "dotPlotButton";
-            this.dotPlotButton.Size = new System.Drawing.Size(104, 36);
+            this.dotPlotButton.Size = new System.Drawing.Size(128, 36);
             this.dotPlotButton.TabIndex = 4;
             this.dotPlotButton.Text = "Dot Plot";
-            this.dotPlotButton.UseVisualStyleBackColor = true;
+            this.dotPlotButton.UseVisualStyleBackColor = false;
             this.dotPlotButton.Click += new System.EventHandler(this.dotPlotButton_Click);
             // 
             // boxPlotButton
             // 
-            this.boxPlotButton.Location = new System.Drawing.Point(50, 241);
+            this.boxPlotButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.boxPlotButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxPlotButton.Location = new System.Drawing.Point(4, 155);
             this.boxPlotButton.Name = "boxPlotButton";
-            this.boxPlotButton.Size = new System.Drawing.Size(104, 36);
+            this.boxPlotButton.Size = new System.Drawing.Size(128, 36);
             this.boxPlotButton.TabIndex = 5;
             this.boxPlotButton.Text = "Box Plot";
-            this.boxPlotButton.UseVisualStyleBackColor = true;
+            this.boxPlotButton.UseVisualStyleBackColor = false;
             this.boxPlotButton.Click += new System.EventHandler(this.boxPlotButton_Click);
             // 
             // ShowFormulasButton
             // 
-            this.ShowFormulasButton.Location = new System.Drawing.Point(367, 438);
+            this.ShowFormulasButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ShowFormulasButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShowFormulasButton.Location = new System.Drawing.Point(252, 480);
             this.ShowFormulasButton.Name = "ShowFormulasButton";
-            this.ShowFormulasButton.Size = new System.Drawing.Size(139, 59);
+            this.ShowFormulasButton.Size = new System.Drawing.Size(174, 45);
             this.ShowFormulasButton.TabIndex = 6;
             this.ShowFormulasButton.Text = "Show Formulas";
-            this.ShowFormulasButton.UseVisualStyleBackColor = true;
+            this.ShowFormulasButton.UseVisualStyleBackColor = false;
             this.ShowFormulasButton.Click += new System.EventHandler(this.ShowFormulasButton_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(564, 241);
+            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(745, 155);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 36);
+            this.button1.Size = new System.Drawing.Size(128, 36);
             this.button1.TabIndex = 12;
             this.button1.Text = "Box Plot";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(564, 362);
+            this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(745, 208);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 36);
+            this.button2.Size = new System.Drawing.Size(128, 36);
             this.button2.TabIndex = 11;
             this.button2.Text = "Dot Plot";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(724, 137);
+            this.button3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(745, 261);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 36);
+            this.button3.Size = new System.Drawing.Size(128, 36);
             this.button3.TabIndex = 10;
             this.button3.Text = "Histogram";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(724, 241);
+            this.button4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(745, 314);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(104, 36);
+            this.button4.Size = new System.Drawing.Size(128, 36);
             this.button4.TabIndex = 9;
             this.button4.Text = "Pie Chart";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(724, 362);
+            this.button5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(745, 369);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(104, 36);
+            this.button5.Size = new System.Drawing.Size(128, 36);
             this.button5.TabIndex = 8;
             this.button5.Text = "Scatter Plot";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(564, 137);
+            this.button6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(745, 100);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(104, 36);
+            this.button6.Size = new System.Drawing.Size(128, 36);
             this.button6.TabIndex = 7;
             this.button6.Text = "Bar Graph";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(308, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 23);
+            this.label1.Size = new System.Drawing.Size(258, 28);
             this.label1.TabIndex = 13;
             this.label1.Text = "Generate Graphs Between";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(64, 90);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(-1, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(351, 23);
+            this.label2.Size = new System.Drawing.Size(388, 28);
             this.label2.TabIndex = 14;
             this.label2.Text = "States And Percentage Deaths Per State";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(508, 90);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(484, 55);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(365, 23);
+            this.label3.Size = new System.Drawing.Size(402, 28);
             this.label3.TabIndex = 15;
             this.label3.Text = "States And Percentage Smokers Per State";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(367, 300);
+            this.button7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(453, 480);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(139, 59);
+            this.button7.Size = new System.Drawing.Size(174, 45);
             this.button7.TabIndex = 16;
             this.button7.Text = "Linear Regression";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::LinkFormsToPython.Properties.Resources.image;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(885, 537);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label3);
