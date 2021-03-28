@@ -41,12 +41,14 @@ def calcVarianceGrouped(dataSet, frequencySet):
     Calculate variance for grouped data
     """
     mean = calcMeanGroupedData(dataSet, frequencySet)
+    totalNum = 0
     sum = 0
 
     for i in range(0, len(dataSet)):
         sum += pow(dataSet[i] - mean, 2) * frequencySet[i]
+        totalNum += frequencySet[i]
     
-    return float(sum / (len(dataSet) - 1))
+    return float(sum / (totalNum - 1))
 
 def calcStandardDeviationGrouped(dataSet, frequencySet):
     """

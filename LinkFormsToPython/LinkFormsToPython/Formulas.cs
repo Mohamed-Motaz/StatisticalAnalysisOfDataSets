@@ -35,7 +35,7 @@ namespace LinkFormsToPython
             */
             if (dataSet.Count != frequencySet.Count)
                 throw new Exception("Data set and frequency set sizes not equal");
-
+            
 
             double mean = 0;
             double numberOfElements = 0;
@@ -55,12 +55,16 @@ namespace LinkFormsToPython
             */
             double mean = calcMeanGroupedData(dataSet, frequencySet);
             double sum = 0;
-
+            double totalNum = 0;
             for (int i = 0; i < dataSet.Count; i++)
+            {
                 sum += Math.Pow(dataSet[i] - mean, 2) * frequencySet[i];
+                totalNum += frequencySet[i];
+            }
+               
 
 
-            return sum / (dataSet.Count - 1);
+            return sum / (totalNum - 1);
         }
     
 
@@ -170,10 +174,7 @@ namespace LinkFormsToPython
         }
             
 
-        public static int calcNumberOfClassesForHistogram(List<double> dataSet)
-        {
-            return (int)(Math.Ceiling(Math.Sqrt(dataSet.Count)));
-        }
+        
 
         public static double calcMedian(List<double> dataSet)
         {

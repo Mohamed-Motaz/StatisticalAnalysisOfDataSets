@@ -5,7 +5,7 @@ import dataSetImport
 stateNames, percentageDeathsPerState, percentageSmokersPerState = dataSetImport.run()
 
 
-x = dataSetImport.abbreviateStateNames(stateNames)
+x = stateNames
 y = percentageDeathsPerState
 z = percentageSmokersPerState
 
@@ -24,5 +24,6 @@ plt.scatter(X, Y, color="green", label="Points")
 
 plt.xlabel("Percentage of Smokers")
 plt.ylabel("Percentage of Deaths")
+plt.legend()
 plt.show()
 
