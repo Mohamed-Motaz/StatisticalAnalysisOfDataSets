@@ -41,7 +41,7 @@ namespace LinkFormsToPython
                 MessageBox.Show("Please enter a valid value");
                 return;
             }
-            if (value > 1) value /= 100;
+            if (value >= 1) value /= (double)100;
 
             PercentageDeathsTextBox.Text = Math.Round(Formulas.calcPredictedY(percentageDeathsPerState, percentageSmokersPerState, value), 2).ToString();
         }

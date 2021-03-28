@@ -5,7 +5,7 @@ import dataSetImport
 stateNames, percentageDeathsPerState, percentageSmokersPerState = dataSetImport.run()
 
 
-x = dataSetImport.abbreviateStateNames(stateNames)
+x = stateNames
 y = percentageDeathsPerState
 z = dataSetImport.turnPercentageFromFloatToInt(percentageSmokersPerState)
 
@@ -14,13 +14,12 @@ labels = x
 deathsInState = y
 
 
-x = np.arange(len(labels))  # the label locations
-width = 0.35  # the width of the bars
+x = np.arange(len(labels))  
+width = 0.35  
 
 fig, ax = plt.subplots()
 rects1 = ax.bar(x, deathsInState, width,color="orange",label='Deaths')
 
-# Add some text for labels, title and custom x-axis tick labels, etc.
 ax.set_ylabel('Percentage of Deaths')
 ax.set_xlabel('States')
 ax.set_xticks(x)
@@ -29,12 +28,12 @@ ax.legend()
 
 
 def autolabel(rects):
-    """Attach a text label above each bar in rects, displaying its height."""
+    """Attach a text label above each bar to display its height."""
     for rect in rects:
         height = rect.get_height()
         ax.annotate('{}'.format(height),
                     xy=(rect.get_x() + rect.get_width() / 2, height),
-                    xytext=(0, 3),  # 3 points vertical offset
+                    xytext=(0, 3),  
                     textcoords="offset points",
                     ha='center', va='bottom')
 

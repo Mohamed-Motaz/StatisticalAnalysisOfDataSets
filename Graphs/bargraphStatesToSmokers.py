@@ -5,7 +5,7 @@ import dataSetImport
 stateNames, percentageDeathsPerState, percentageSmokersPerState = dataSetImport.run()
 
 
-x = dataSetImport.abbreviateStateNames(stateNames)
+x = stateNames
 y = percentageDeathsPerState
 z = dataSetImport.turnPercentageFromFloatToInt(percentageSmokersPerState)
 
@@ -14,13 +14,12 @@ labels = x
 smokersInState = z
 
 
-x = np.arange(len(labels))  # the label locations
-width = 0.35  # the width of the bars
+x = np.arange(len(labels))  
+width = 0.35  #
 
 fig, ax = plt.subplots()
 rects1 = ax.bar(x, smokersInState, width,color="orange",label='Deaths')
 
-# Add some text for labels, title and custom x-axis tick labels, etc.
 ax.set_ylabel('Percentage of Smokers')
 ax.set_xlabel('States')
 ax.set_xticks(x)

@@ -9,7 +9,7 @@ x = stateNames
 y = percentageDeathsPerState
 z = percentageSmokersPerState
 
-X = np.array(z).reshape(-1, 1)
+X = np.array(z).reshape(-1, 1)  # [1,2,3,4] => [[1],[2],[3],[4]]
 Y = np.array(y)
 li_rg = LinearRegression()
 li_rg.fit(X, Y)
@@ -18,7 +18,7 @@ predictedX = [[25], [26], [27], [28], [29], [30]]
 predictedY = li_rg.predict(predictedX)
 
 
-plt.plot(X, Y_pred, color="red", label="Regression line")
+plt.plot(X, Y_pred, color="blue", label="Regression line")
 plt.scatter(predictedX, predictedY, color="orange", label="Data Prediction")
 plt.scatter(X, Y, color="green", label="Points")
 

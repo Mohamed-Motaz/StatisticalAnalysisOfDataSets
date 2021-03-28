@@ -11,6 +11,8 @@ z = percentageSmokersPerState
 
 
 plt.hist(y , bins= (math.ceil(math.sqrt(len(y)))) , color='r' )
+#bins is class width
+
 plt.title("Histogram")
 plt.xlabel("Percentage of Deaths")
 plt.ylabel("Frequency")

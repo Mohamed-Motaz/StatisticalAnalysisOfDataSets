@@ -3,7 +3,7 @@ import dataSetImport
 stateNames, percentageDeathsPerState, percentageSmokersPerState = dataSetImport.run()
 
 
-x = dataSetImport.abbreviateStateNames(stateNames)
+x = stateNames
 y = percentageDeathsPerState
 z = percentageSmokersPerState
 

@@ -4,28 +4,23 @@ import dataSetImport
 stateNames, percentageDeathsPerState, percentageSmokersPerState = dataSetImport.run()
 
 
-x = dataSetImport.abbreviateStateNames(stateNames)
+x = stateNames
 y = percentageDeathsPerState
 z = percentageSmokersPerState
 
     
-# Creating dataset 
-np.random.seed(10)
+
 
 data =  y
   
 tmp,ax1=plt.subplots()
 
-red_square = dict(markerfacecolor='r', marker='s')
+blue_square = dict(markerfacecolor='b', marker='s')
 
-ax1.boxplot(data, flierprops=red_square,meanline=True,showfliers=True)
+ax1.boxplot(data, flierprops=blue_square,showfliers=True)
 
 ax1.set_title('Box Plot')
-#patch.set_facecolor("pink")
 ax1.set_ylabel('Percentage of Deaths')
  
-# Creating plot 
-ax1.boxplot(data) 
   
-# show plot 
 plt.show()

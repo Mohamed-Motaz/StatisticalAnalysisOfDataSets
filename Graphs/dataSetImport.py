@@ -163,6 +163,3 @@ def run():
 
 
 
-#for i in range(0, len(stateNames)):
-#    print(stateNames[i], deathsPerState[i], percentageSmokersPerState[i])  
-

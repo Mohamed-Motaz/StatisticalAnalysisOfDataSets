@@ -91,17 +91,6 @@ namespace LinkFormsToPython
         }
             
 
-        //priv abbreviateStateNames(statesNames):
-        //    newStatesNames = []
-        //    for i in range(0, len(stateNames)):
-        //        newStatesNames.append(stateNames[i][0] + stateNames[i][1])
-        //    return newStatesNames
-
-        //def turnPercentageFromFloatToInt(percentageSmokersPerState):
-        //    newPercentageSmokersPerState = []
-        //    for i in range(0, len(percentageSmokersPerState)):
-        //        newPercentageSmokersPerState.append(int(percentageSmokersPerState[i]))
-        //    return newPercentageSmokersPerState
 
         public static void run()
         {
